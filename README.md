@@ -40,15 +40,32 @@ js-预编译过程
 
 
 
+             function test(){
+                 return foo;
+                 foo=123;
+                 function foo(){};
+                 var foo=900;
+             }
+           console.log(test())     //   function foo(){};
 
 
 
+              function test(){
+                    return foo;
+                    foo=123;
+                    var foo=900;
+                }
+              console.log(test())     //   undefined
 
 
 
-
-
-
+                function test(){
+                    foo=123;
+                    function foo(){}
+                    var foo=900;   
+                    return foo    //只要是上面被赋过值，下面就直接输出
+                }
+               console.log(test())     //   900
 
 
 
