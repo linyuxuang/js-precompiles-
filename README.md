@@ -69,3 +69,38 @@ js-预编译过程
 
 
 
+
+
+                 a=100;
+                 console.log(a)//100
+                function test(e){
+                  function e(){};
+                  arguments[0]=2;  //修改第一个参数值，
+                  console.log(e); //2
+                    if(a){
+                        var b=123;
+                        function c(){};
+                    }
+                    var c;
+                    a=10;
+                    var a;
+                    console.log(b); //undefined
+                    f=123;
+                    console.log(c);//undefined
+                    console.log(a)  //10
+                }
+                 var a;
+                test(1);
+                 console.log(a)  //100
+                 console.log(f)  //123
+
+
+
+
+
+
+
+
+
+
+
